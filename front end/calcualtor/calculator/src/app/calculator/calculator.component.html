@@ -1,0 +1,37 @@
+<div class="calc">
+    <input [(ngModel)]="screen" type="=text">
+    <div class="btn">
+     <div class="del">
+       <button (click)="clear()">c</button>
+      <button (click)="clear()">ce</button>
+      <button (click)="back()">delete</button>
+     </div>
+     <div class="num">
+      <button (click)="write('1')">1</button>
+      <button (click)="write('2')">2</button>
+      <button (click)="write('3')">3</button>
+      <button (click)="write('4')">4</button>
+      <button (click)="write('5')">5</button>
+      <button (click)="write('6')">6</button>
+      <button (click)="write('7')">7</button>
+      <button (click)="write('8')">8</button>
+      <button (click)="write('9')">9</button>
+      <button (click)="write('0')">0</button>
+      <button (click)="write('.')">.</button>
+      <button (click)="equal()">=</button>
+     </div>
+     <div class="operations">
+      <button (click)="writeop('+')">+</button>
+      <button (click)="writeop('-')">-</button>
+      <button (click)="writeop('*')">*</button>
+      <button (click)="writeop(':')">/</button>
+      <button (click)="writeop('~')">%</button>
+      <button (click)="swap()">+/-</button>
+      <button (click)="writeop_('1:')">1/x</button>
+      <button (click)="writeop('^2')">x^2</button>
+      <button (click)="writeop('^.5')">sqrt(x)</button>
+      
+   
+     </div>
+   </div>
+   </div>
