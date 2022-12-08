@@ -19,7 +19,7 @@ export class CalculatorComponent implements OnInit {
   screen: String ="0";
   
   write(text :string){
-    if(this.screen=="Infinity"||this.screen=="cant divide by zero")
+    if(this.screen=="Infinity"||this.screen=="cant divide by zero"||this.screen=="NaN")
     {
       this.screen="0";
     }
@@ -50,7 +50,7 @@ export class CalculatorComponent implements OnInit {
      }
   }
    writeop(text :string){
-    if(this.screen=="Infinity"||this.screen=="cant divide by zero")
+    if(this.screen=="Infinity"||this.screen=="cant divide by zero"||this.screen=="NaN")
     {
       this.screen="0";
     }
@@ -62,7 +62,7 @@ export class CalculatorComponent implements OnInit {
   this.equal();
   }
   writeop_(text:string){
-    if(this.screen=="Infinity"||this.screen=="cant divide by zero")
+    if(this.screen=="Infinity"||this.screen=="cant divide by zero"||this.screen=="NaN")
     {
       this.screen="0";
     }
@@ -88,6 +88,10 @@ export class CalculatorComponent implements OnInit {
     this.screen="0";
   }
   back(){
+    if(this.screen=="Infinity"||this.screen=="cant divide by zero"||this.screen=="NaN")
+    {
+      this.screen="0";
+    }
    this.screen= this.screen.slice(0, -1);
    if(this.screen=='')
    {
@@ -95,6 +99,10 @@ export class CalculatorComponent implements OnInit {
    }
   }
   swap(){
+    if(this.screen=="Infinity"||this.screen=="cant divide by zero"||this.screen=="NaN")
+    {
+      this.screen="0";
+    }
     for(var i=this.screen.length-1;i>=0;i--)
     {
       if(this.screen.charAt(i)=='+')
